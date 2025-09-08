@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box practice</title>
+</head>
+<style>
+    div {
+        color: white;
+        background-color: black;
+        width: 50%;
+        length: 400px;
+    }
+
+    div btn {
+        border: 3px 3px 1px 1px solid white;
+        background-color: rgb(134, 134, 216);
+        text-align: center;
+        cursor: pointer;
+        color: white;
+    }
+
+    .btn:hover {
+        background-color: rgb(39, 39, 154);
+    }
+</style>
+
+<body>
+    <div>
+        <h6>Featured post</h6>
+        <h1>The role <br> of wevflow <br> Developer</h1>
+        <p><b>Lorem</b> ipsum dolor sit amet consectetur adipisicing elit. Vitae deleniti mollitia magni provident qui
+            hic
+            fugit repellat enim architecto,<b>Lorem</b> nostrum veritatis earum rerum nam doloremque cum. Doloremque,
+            aliquid esse? debitis nostrum veritatis earum rerum nam doloremque cum. Doloremque,
+            aliquid esse?</p>
+        <br>
+        <button class="btn">READ FULL ARTICLE</button>
+    </div>
+
+
+</body>
+
+</html>

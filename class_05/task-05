@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form Document</title>
+</head>
+<style>
+    body {
+        background-color: blue;
+    }
+
+    #box1 {
+        background-color: antiquewhite;
+    }
+
+    #button {
+        background-color: rgb(240, 113, 134);
+    }
+</style>
+
+<body>
+    <div id="box1">
+        <h1>coperate Training Mode Easy</h1>
+        <p>Engaging and empowering learning through technology.</p>
+        <br>
+        <p>Edutor is the perfect theme for your moodle LMS platform.</p>
+        <br><br>
+        <ul>
+            <li>List item example lorem ipsum</li>
+            <li>List item example lorem ipsum</li>
+            <li>List item example lorem ipsum</li>
+        </ul>
+        <button id="button1">Get started</button>
+    </div>
+
+</body>
+
+</html>

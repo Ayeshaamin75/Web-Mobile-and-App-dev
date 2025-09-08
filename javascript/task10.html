@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Student Grade Manager</title>
+</head>
+<body>
+    
+  <h2>Student Grade Manager</h2>
+
+  <input type="text" id="name" placeholder="Enter student name">
+  <input type="number" id="marks" placeholder="Enter marks">
+  <button onclick="addStudent()">Add Student</button>
+
+  <h3>Student List:</h3>
+  <ul id="studentList"></ul>
+
+  <h3 id="avgDisplay">Average: 0</h3>
+
+  <script>
+    let students = [];
+
+    function addStudent() {
+      const name = document.getElementById('name').value.trim();
+      const marks = parseInt(document.getElementById('marks').value);
+      if (!name || isNaN(marks)) return;
+
+      students.push({ name, marks });
+      updateList();
+    }
+
+    function deleteStudent(index) {
+      students.splice(index, 1);
+      updateList();
+    }
+
+    function updateList() {
+      const list = document.getElementById('studentList');
+      list.innerHTML = '';
+
+      let total = 0;
+
+      students.forEach((student, index) => {
+        const li = document.createElement('li');
+        li.textContent = `${student.name} - ${student.marks} `;
+
+        if (student.marks < 40) {
+          li.style.color = 'red';
+        }
+
+        const delBtn = document.createElement('button');
+        delBtn.textContent = 'Delete';
+        delBtn.onclick = () => deleteStudent(index);
+        li.appendChild(delBtn);
+
+        list.appendChild(li);
+        total += student.marks;
+      });
+
+      const avg = students.length ? (total / students.length).toFixed(2) : 0;
+      document.getElementById('avgDisplay').textContent = 'Average: ' + avg;
+    }
+  </script>
+
+</body>
+</html>
